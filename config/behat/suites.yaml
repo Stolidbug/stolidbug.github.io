@@ -1,0 +1,21 @@
+imports:
+
+    - suites/backend/dashboard.yaml
+    - suites/backend/security/managing_administrators.yaml
+
+    - suites/cli/installer.yaml
+
+    #- suites/backend/webpage/managing_pages.yaml
+    - suites/backend/blog/managing_articles.yaml
+    - suites/backend/blog/managing_authors.yaml
+    - suites/backend/blog/managing_categories.yaml
+
+    #- suites/api/webpage/managing_pages.yaml
+    - suites/api/blog/managing_articles.yaml
+    - suites/api/blog/managing_authors.yaml
+    - suites/api/blog/managing_categories.yaml
+
+    #- suites/frontend/webpage/managing_pages.yaml
+    - suites/frontend/blog/managing_articles.yaml
+    - suites/frontend/contact/contacting_administrator.yaml
+

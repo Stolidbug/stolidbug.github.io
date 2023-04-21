@@ -1,0 +1,11 @@
+default:
+    suites:
+        backend_dashboard:
+            contexts:
+                - App\Tests\Behat\Context\Hook\DoctrineORMContext
+
+                - App\Tests\Behat\Context\Setup\AdminSecurityContext
+
+                - App\Tests\Behat\Context\UI\Backend\DashboardContext
+            filters:
+                tags: "@backend&&@dashboard"

@@ -1,0 +1,27 @@
+{% macro default(text) %}
+    <span class="ui label">{{ text|trans }}</span>
+{% endmacro %}
+
+{% macro status(status) %}
+    {% import _self as labels %}
+
+    {% if status %}
+        {{ labels.enabled() }}
+    {% else %}
+        {{ labels.disabled() }}
+    {% endif %}
+{% endmacro %}
+
+{% macro enabled() %}
+    <span class="ui teal label">
+        <i class="checkmark icon"></i>
+        {{ 'backend.webpage.ui.page.fields.status.published'|trans }}
+    </span>
+{% endmacro %}
+
+{% macro disabled() %}
+    <span class="ui red label">
+        <i class="remove icon"></i>
+        {{ 'backend.webpage.ui.page.fields.status.notPublished'|trans }}
+    </span>
+{% endmacro %}

@@ -1,0 +1,15 @@
+{% extends 'backend/layout.html.twig' %}
+
+{% block content %}
+
+    {% block title %}{{ page.name }}{% endblock %}
+
+    {% block body %}
+        <h1>{{ page.name }}</h1>
+        <p>{{ 'frontend.page.read.created_at'|trans({'date': page.publicationDate|date('d/m/Y')}) }} - {{ 'frontend.page.read.created_by'|trans({'author': page.author}) }}</p>
+        <hr>
+        <p>{{ page.content }}</p>
+
+        <a href="{{ path('app_backend_webpage_page_index') }}">Go Back</a>
+    {% endblock %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'backend/layout.html.twig' %}
+
+{% set definition = resources.definition %}
+
+{% set header = configuration.vars.header|default(metadata.applicationName ~ '.ui.' ~ metadata.pluralName) %}
+
+{% block title %}{{ parent() }} {{ header|trans }}{% endblock %}
+
+{% block content %}
+    {% include 'backend/crud/index/_header.html.twig' with {header, definition} %}
+    {% include 'backend/crud/index/_content.html.twig' %}
+{% endblock %}

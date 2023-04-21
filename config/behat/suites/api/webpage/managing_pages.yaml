@@ -1,0 +1,11 @@
+default:
+    suites:
+        api_managing_pages:
+            contexts:
+                - App\Tests\Behat\Context\Hook\DoctrineORMContext
+
+                - App\Tests\Behat\Context\Setup\ApiSecurityContext
+
+                - App\Tests\Behat\Context\UI\API\WebPage\ManagingPagesContext
+            filters:
+                tags: "@api&&@webpage"

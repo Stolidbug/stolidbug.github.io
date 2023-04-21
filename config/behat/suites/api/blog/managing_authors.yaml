@@ -1,0 +1,11 @@
+default:
+    suites:
+        api_managing_authors:
+            contexts:
+                - App\Tests\Behat\Context\Hook\DoctrineORMContext
+                - App\Tests\Behat\Context\Setup\ApiSecurityContext
+                - App\Tests\Behat\Context\Setup\AuthorContext
+
+                - App\Tests\Behat\Context\UI\API\Blog\ManagingAuthorsContext
+            filters:
+                tags: "@api&&@blog&&@authors"

@@ -1,0 +1,11 @@
+{% extends 'backend/layout.html.twig' %}
+
+{% block content %}
+
+    {% block title %}{{ category.name }}{% endblock %}
+
+    {% block body %}
+        <h1>{{ category.name }}</h1>
+        <a href="{{ path('app_backend_blog_article_index') }}">Go Back</a>
+    {% endblock %}
+{% endblock %}

@@ -1,0 +1,22 @@
+    {{ form_row(form.title, {
+        'attr': {
+            'class': 'input-slug-transform',
+        }
+    }) }}
+    {{ form_row(form.image) }}
+
+    {% if form.vars.value.image is not same as(null) %}
+        <img src="{{ stream_image_string(form.vars.value.image) }}"
+            class="w-full object-cover lg:rounded image-article"/>
+    {% endif %}
+
+    {{ form_row(form.content) }}
+    {{ form_row(form.authors) }}
+    {{ form_row(form.categories) }}
+
+    {{ form_row(form.slug, {
+        'attr': {
+            'class': 'output-slug-transform',
+            'data-url': path('app_backend_blog_generate_slug', {'data': '__data__'})
+        }
+    }) }}

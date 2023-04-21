@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+    <atom:link href="{{ url(constant('App\\UI\\Syndication\\RSS\\Controller\\Routes::RSS_READ_ARTICLES')['name']) }}" rel="self" type="application/rss+xml" />
+
+    <title>{{ 'syndication.rss.article.title'|trans }}</title>
+    <description>{{ 'syndication.rss.article.description'|trans }}</description>
+    <link>{{ url(constant('App\\UI\\Syndication\\RSS\\Controller\\Routes::RSS_READ_ARTICLES')['name']) }}</link>
+    <lastBuildDate>{{ articles.0.createdAt|default('now')|date('r') }}</lastBuildDate>
+    <language>{{ app.request.getLocale()|default('en') }}</language>
+
+    {% for article in articles %}
+    <item>
+        <title>{{ article.title }}</title>
+        <link>{{ url(constant('App\\UI\\Frontend\\Controller\\Routes::FRONTEND_BLOG_SHOW_ARTICLE')['name'], {'slug': article.slug}) }}</link>
+        <description>{{ article.content|u.truncate(260, '...', false) }}</description>
+        <guid isPermaLink="false">{{ article.id }}</guid>
+        <pubDate>{{ article.createdAt|date('r') }}</pubDate>
+    </item>
+    {% endfor %}
+</channel>
+
+</rss>

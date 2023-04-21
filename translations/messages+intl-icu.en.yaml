@@ -1,0 +1,241 @@
+app:
+    ui:
+        avatar: Avatar
+        create_user: Create an user
+        forgotten_password: Forgotten password
+        legal_notices: Legal notices
+        overview_of_your_website: Overview of you website
+        search_customers: Search customers
+        validate: Validate
+        view_website: View website
+        send: The mail is well sent
+        captcha_error: The captcha is not valid
+
+sylius:
+    ui:
+        publication_date: Date of publication
+        article: Article
+        blog: Blog
+
+backend:
+    blog:
+        ui:
+            article:
+                create:
+                    title: Create an article
+                index:
+                    title: Articles
+                form:
+                    title:
+                        label: Title
+                        not_blank: The title cannot be blank
+                    content:
+                        label: Content
+                        not_blank: The content cannot be blank
+                    image:
+                        label: Image
+                    categories:
+                        label: Categories
+                    authors:
+                        label: Authors
+                    slug:
+                        label: Slug
+                        not_blank: The slug cannot be blank
+                grid:
+                    fields:
+                        title:
+                            label: Title
+                        content:
+                            label: Content
+                        updatedAt:
+                            label: Updated at
+                        createdAt:
+                            label: Created at
+                        categories:
+                            label: Category
+                        authors:
+                            label: Authors
+                        slug:
+                            label: Slug
+            author:
+                create:
+                    title: Create an author
+                index:
+                    title: Authors
+                form:
+                    name:
+                        label: Name
+                    slug:
+                        label: Slug
+                grid:
+                    fields:
+                        name:
+                            label: Name
+                        slug:
+                            label: Slug
+            category:
+                create:
+                    title: Create a category
+                index:
+                    title: Categories
+                form:
+                    name:
+                        label: Name
+                    slug:
+                        label: Slug
+                grid:
+                    fields:
+                        name:
+                            label: Name
+                        slug:
+                            label: Slug
+    webpage:
+        ui:
+            page:
+                create:
+                    title: Create a page
+                index:
+                    title: Pages
+                subheader: Manage your pages
+                form:
+                    name:
+                        label: Name
+                    content:
+                        label: Content
+                    author:
+                        label: Author
+                    status:
+                        label: Status
+                    slug:
+                        label: Slug
+                fields:
+                    name:
+                        label: Name
+                    content:
+                        label: Content
+                    author:
+                        label: Author
+                    slug:
+                        label: Slug
+                    status:
+                        label: Status
+                        published: Published
+                        notPublished: Not published
+            pages:
+                breadcrumb: Pages
+frontend:
+    home:
+        title: Christophe Ligneres
+        introduction: |
+            I am a web developer, specialized in web application development. I'm also a big fan of new technologies and software development.
+    skills:
+        title: What does Christophe do?
+        php:
+            title: PHP
+            content: |
+                I have been working with PHP for more than 2 years. I have worked with several versions of PHP, from 5.6 to 8.2.
+        symfony:
+            title: Symfony
+            content: |
+                I have been working with Symfony for more than 2 years. I have worked with several versions of Symfony, from 4.4 to 6.2.
+                I have upgraded projects from Symfony 4.4 to Symfony 5.4 and from Symfony 5.4 to Symfony 6.2 etc.
+        monofony:
+            title: Monofony
+            content: |
+                I have been working with Monofony for more than a year. I work with version 1.10 of Monofony.
+        sylius:
+            title: Sylius
+            content: |
+                I have been working with Sylius for more than 1 years. I have worked with several versions of Sylius, from 1.6 to 1.10.
+                I have upgraded projects from Sylius 1.6 to Sylius 1.8 and from Sylius 1.8 to Sylius 1.10 etc.
+    header:
+        home:
+            title: Christophe Ligneres
+            subtitle: Welcome to my website
+            button: Go home
+        contact:
+            button: Contact me
+            title: Contact me
+            subtitle: If you want to contact me, there is the contact form on my website.
+        articles:
+            title: Articles
+            subtitle: You will find here all my articles on various subjects.
+        article:
+            title: Article
+            subtitle: Very good choice.
+    contact:
+        index:
+            title: Contact
+        create:
+            form:
+                title: Are you experiencing a technical problem? You need help with a development question? Do not hesitate to contact me.
+                name:
+                    label: Name
+                email:
+                    label: Email
+                message:
+                    label: Message
+                send:
+                    label: Send
+                captcha:
+                    title: You are a robot ?
+                    question:
+                        label: What is the result of ?
+                    answer:
+                        label: Your answer
+    Who_I_am:
+        title: Who I am
+        content: |
+            I am a web developer, specialized in web application development. I'm also a big fan of new technologies and software development.
+    page:
+        index:
+            subtitle: Welcome to page
+        read:
+            title: Page
+            created_at: Created at {date}
+            created_by: Created by {author}
+    blog:
+        index:
+            title: Articles
+        last_articles:
+            title: My last articles
+            button: See all my articles
+        read:
+            title: Article
+            created_at: Created at
+            created_by: Created by
+            categories: Categories
+            button: Read the article
+    footer:
+        title: Social networks
+        content: |
+            If you want to contact me, there is the contact form on my website. Otherwise, you have my social networks. My GitHub profile is the perfect place to know me better.
+        home: Monofony
+        legal_notices: Legal notices
+    game:
+        index:
+            title: Mystery Number Game
+            subtitle: Bravo ! You have found the secret page!
+        processor:
+            congratulations: Congratulations, you won in {tries} attempts.
+            difficulty_increase: The difficulty has increased, try to guess the new mystery number between 1 and {newDifficulty}.
+            number_greater: The mystery number is greater.
+            number_smaller: The mystery number is smaller.
+            try_again: Try again.
+            out_of_tries: You have used up all your attempts. The mystery number was {mysteryNumber}.
+
+        template:
+            mystery_number_title: Mystery Number Game
+            guess_mystery_number: Guess the mystery number
+            guess_between: Try to guess the mystery number between 1 and {difficulty}.
+            max_tries: You have {max_tries} attempts to find the mystery number.
+
+syndication:
+    rss:
+        title: RSS feed for monofony
+        article:
+            title: Articles
+            description: Our last posts
+        category:
+            title: Articles of category {category}
+            description: Last posts for category {category}

@@ -1,0 +1,34 @@
+{% import _self as header %}
+
+<header {{ sylius_test_html_attribute('header') }}>
+    {% set current_route = app.request.attributes.get('_route') %}
+    <section class="bg-green">
+        <div class="container-big pt-8 py-16 overflow-hidden lg:relative lg:py-48">
+            <div class="flex flex-col items-center gap-y-10 mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
+                {{ header.include_header_template(current_route) }}
+            </div>
+            <div class="sm:mx-auto sm:max-w-3xl sm:px-6 hidden lg:block">
+                <div class="py-12 sm:relative sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+                    <div class="absolute inset-y-0 left-1/2 w-screen bg-orange rounded-bl-full z-10 lg:left-10 lg:right-0 lg:w-full"></div>
+                    <div class="absolute inset-y-0 left-1/2 w-screen bg-white shadow-xl rounded-bl-full lg:left-7 lg:right-0 lg:w-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
+
+{% macro include_header_template(route) %}
+    {% if route == 'app_frontend_contact' %}
+        {% include 'frontend/header/header_contact.html.twig' %}
+    {% elseif route == 'app_frontend_homepage' %}
+        {% include 'frontend/header/header_home.html.twig' %}
+    {% elseif route == 'app_frontend_blog_article_show' %}
+        {% include 'frontend/header/header_article.html.twig' %}
+    {% elseif route == 'app_frontend_blog_last_read_articles' %}
+        {% include 'frontend/header/header_last_articles.html.twig' %}
+    {% elseif route == 'app_frontend_mystery_number' %}
+        {% include 'frontend/header/header_mystery.html.twig' %}
+    {% elseif route == 'app_frontend_webpage_page_show' %}
+        {% include 'frontend/header/header_page.html.twig' %}
+    {% endif %}
+{% endmacro %}

@@ -1,0 +1,12 @@
+    {{ form_row(form.name, {
+        'attr': {
+            'class': 'input-slug-transform',
+        }
+    }) }}
+
+    {{ form_row(form.slug, {
+        'attr': {
+            'class': 'output-slug-transform',
+            'data-url': path('app_backend_blog_generate_slug', {'data': '__data__'})
+        }
+    }) }}

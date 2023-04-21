@@ -1,7 +1,0 @@
-@import "~tailwindcss/base";
-@import "~tailwindcss/components";
-@import "~tailwindcss/utilities";
-
-.container-big {
-  @apply 4xl:container 4xl:mx-auto;
-}

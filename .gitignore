@@ -1,28 +1,89 @@
-# Don't forget to add a global gitignore!
-# see https://stackoverflow.com/questions/7335420/global-git-ignore#answer-7335487
+/etc/build/*
+!/etc/build/.gitignore
 
 /Makefile
 /Makefile.local
-
+/Makefile.test
 /infrastructure/dev/docker
 
 ###> dev environment ##
-.editorconfig
+/.editorconfig
+/.php-cs-fixer.dist.php
+/phpstan.neon
+/rector.php
+/ecs.php
+/psalm.xml
+###< dev environment ###
+
+###> test environment ##
+/.env.test
+/.phpspec.yml.dist
+/behat.yml.dist
+/.twig_cs.dist.php
 ###< dev environment ###
 
 ###> docker environment ##
+.dockerignore
 /docker-compose*
 /docker-dev.lock
-.dockerignore
+/infrastructure/docker/**/data
 ###< docker environment ###
 
 ###> prod environment ##
 ###< prod environment ###
 
-###> javascript ###
-/node_modules
-/npm-cache
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> liip/imagine-bundle ###
+/public/media/cache/
+###< liip/imagine-bundle ###
+
+###> friends-of-behat/symfony-extension ###
+/behat.yml
+###< friends-of-behat/symfony-extension ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
+
+###> friendsofphp/php-cs-fixer ###
+/.php-cs-fixer.php
+/.php-cs-fixer.cache
+###< friendsofphp/php-cs-fixer ###
+
+###> symfony/phpunit-bridge ###
+.phpunit.result.cache
+/phpunit.xml.dist
+###< symfony/phpunit-bridge ###
+
+###> symfony/webpack-encore-bundle ###
+/node_modules/
 /public/build/
 npm-debug.log
 yarn-error.log
-###< javascript ###
+###< symfony/webpack-encore-bundle ###
+
+###> monofony/core-pack ###
+/public/assets
+/public/media
+###< monofony/core-pack ###
+
+###> monofony/core-meta ###
+/public/assets
+/public/media
+###< monofony/core-meta ###
+
+###> lexik/jwt-authentication-bundle ###
+/config/jwt/*.pem
+!/config/jwt/*-test.pem
+!/config/jwt/.gitignore
+###< lexik/jwt-authentication-bundle ###

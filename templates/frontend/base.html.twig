@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="description" content="Christophe LIGNERES' website, php/symfony developer">
+
+    <meta property="og:title" content="Christophe LIGNERES">
+    <meta property="og:description" content="Description de Christophe">
+    <meta property="og:url" content="https://christophe.ligneres.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/build/front/images/portrait.png">
+    <title>{% block title %}{{ 'frontend.home.title'|trans }}{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+            {{ encore_entry_link_tags('app', null, 'frontend') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app', null, 'frontend') }}
+        {% endblock %}
+
+    {% block syndication_rss %}
+        <link rel="alternate" type="application/rss+xml"
+              title="{{ 'syndication.rss.title'|trans }}"
+              href="{{ url(constant('App\\UI\\Syndication\\RSS\\Controller\\Routes::RSS_READ_ARTICLES')['name']) }}" />
+    {% endblock %}
+</head>
+<body>
+<div class="relative">
+    <main class="bg-green">
+{% block header %}
+    {% include "frontend/partials/_header.html.twig" %}
+{% endblock %}
+
+{% block body %}{% endblock %}
+
+{% include "frontend/partials/_footer.html.twig" %}
+    </main>
+</div>
+</body>
+</html>

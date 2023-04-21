@@ -1,0 +1,18 @@
+<div class="text-center flex flex-col items-center lg:block lg:text-left">
+    <div class="mt-6 sm:max-w-xl">
+        <h1 class="text-4xl font-extrabold text-white tracking-tight sm:text-5xl">{{ 'frontend.header.articles.title'|trans }}</h1>
+        <p class="mt-6 text-xl text-blue">{{ 'frontend.header.articles.subtitle'|trans }}</p>
+    </div>
+
+    <div class="mt-12 sm:max-w-lg w-full">
+        <a href="{{ path(constant('App\\UI\\Frontend\\Controller\\Routes::FRONTEND_INDEX')['name']) }}"
+           class="text-center block w-full rounded-full border border-transparent px-5 py-3 transition-all duration-300 bg-orange text-base font-medium text-black shadow hover:bg-dark-orange hover:-translate-y-1 sm:px-10">{{ 'frontend.header.home.button'|trans }}</a>
+    </div>
+</div>
+
+<div class="sm:mx-auto sm:max-w-3xl sm:px-6 hidden md:block">
+    <div class="flex justify-center sm:relative lg:py-12 lg:absolute lg:inset-y-0 lg:right-28 lg:w-1/2">
+        <img src="../../assets/frontend/images/portrait.png" alt="portrait christophe ligneres"
+             class="w-2/3 lg:w-4/5 lg:absolute lg:z-20 lg:bottom-0">
+    </div>
+</div>

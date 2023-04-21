@@ -1,0 +1,7 @@
+default:
+    suites:
+        ui_managing_articles:
+            contexts:
+                - App\Tests\Behat\Context\UI\Frontend\Contact\ContactingAdministratorContext
+            filters:
+                tags: "@frontend&&@contact"

@@ -1,0 +1,39 @@
+{% extends "frontend/base.html.twig" %}
+
+{% block title %}
+    {{ 'frontend.blog.show.title'|trans }} - {{ article.title }}
+{% endblock %}
+
+{% block body %}
+
+    <section class="container-big bg-blue flow-root rounded-3xl px-6 pb-8 relative mt-10">
+        <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+            <div class="bg-white mt-6 p-6 rounded-lg shadow-lg">
+                <div class="flex flex-wrap items-center justify-between">
+                    <div class="md:w-2/3 md:ml-6 mt-4 md:mt-0">
+                        <p class="text-sm text-gray-500 mb-4">{{ 'frontend.blog.read.categories'|trans }}  :
+                            {% for category in article.categories %}
+                            <span class="font-semibold"{{ sylius_test_html_attribute('blog-read-article-category') }}>{{ category.name }}</span>
+                            {% endfor %}
+                        </p>
+                        <p class="text-sm text-gray-500">{{ 'frontend.blog.read.created_at'|trans }} : <span class="font-semibold" {{ sylius_test_html_attribute('blog-read-article-date') }}>{{ article.createdAt|date('d/m/Y') }}</span></p>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h2 class="text-3xl text-center font-bold text-blue-800">
+                        {{ article.title }}
+                    </h2>
+                </div>
+                <div class="mt-6">
+                    <img class="object-cover w-full h-64 rounded-md image-article" src="{{ stream_image(article) }}" alt="Image de l'article">
+                </div>
+                <div class="mt-6">
+                    <p class="mx-auto mt-5 max-w-prose text-xl text-black">
+                    <div class="ck-content">{{ article.content|raw }}</div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,7 @@
+<ul>
+    {% for author in data %}
+        <li>
+            <a href="{{ path(constant('App\\UI\\Backend\\Routes::BACKEND_BLOG_AUTHOR_SHOW')['name'], {'slug': author.slug}) }}">{{ author.name }}</a>
+        </li>
+    {% endfor %}
+</ul>

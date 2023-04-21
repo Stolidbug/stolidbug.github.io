@@ -1,0 +1,13 @@
+default:
+    suites:
+        ui_managing_pages:
+            contexts:
+                - App\Tests\Behat\Context\Hook\DoctrineORMContext
+                - App\Tests\Behat\Context\Setup\PageContext
+
+                - App\Tests\Behat\Context\Transform\SharedStorageContext
+
+                - App\Tests\Behat\Context\UI\Frontend\Webpage\ManagingPagesContext
+
+            filters:
+                tags: "@frontend&&@webpage"

@@ -1,0 +1,11 @@
+default:
+    suites:
+        api_managing_categories:
+            contexts:
+                - App\Tests\Behat\Context\Hook\DoctrineORMContext
+                - App\Tests\Behat\Context\Setup\ApiSecurityContext
+                - App\Tests\Behat\Context\Setup\CategoryContext
+
+                - App\Tests\Behat\Context\UI\API\Blog\ManagingCategoriesContext
+            filters:
+                tags: "@api&&@blog&&@categories"

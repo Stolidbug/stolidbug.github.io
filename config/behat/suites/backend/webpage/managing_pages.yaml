@@ -1,0 +1,14 @@
+default:
+    suites:
+        backend_managing_pages:
+            contexts:
+                - App\Tests\Behat\Context\Hook\DoctrineORMContext
+                - App\Tests\Behat\Context\Setup\AdminSecurityContext
+                - App\Tests\Behat\Context\Setup\PageContext
+
+                - App\Tests\Behat\Context\Transform\SharedStorageContext
+
+                - App\Tests\Behat\Context\UI\Backend\WebPage\ManagingPagesContext
+                - App\Tests\Behat\Context\UI\Backend\NotificationContext
+            filters:
+                tags: "@backend&&@webpage"

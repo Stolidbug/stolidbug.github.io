@@ -1,0 +1,57 @@
+{% extends 'frontend/base.html.twig' %}
+
+{% block title %}{{ 'frontend.contact.index.title'|trans }}{% endblock %}
+
+{% block body %}
+    <section class="container-big bg-blue-500 flow-root rounded-3xl px-6 pb-8 relative mt-10">
+        <div class="mx-auto max-w-md px-4  sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+            <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md bg-white p-6 rounded-lg shadow-md">
+                <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+                    {{ 'frontend.contact.create.form.title'|trans }}
+                {% for message in app.flashes('warning') %}
+                    <div class="bg-green text-white p-2 rounded-lg mb-6">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+                {% for message in app.flashes('error') %}
+                    <div class="bg-red-500 text-white p-2 rounded-lg mb-6" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+                {% for message in app.flashes('success') %}
+                    <div class="bg-green-500 text-white p-2 rounded-lg mb-6">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+                {{ form_start(form, {'attr': {'class': 'space-y-8'}}) }}
+                <div>
+                    {{ form_label(form.name, null, {'label_attr': {'class': 'block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'}, 'attr': {'class': 'block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'}}) }}
+                    {{ form_widget(form.name, {'attr': {'class': 'block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'}}) }}
+                </div>
+                <div>
+                    {{ form_label(form.email, null, {'label_attr': {'class': 'block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'}, 'attr': {'class': 'block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'}}) }}
+                    {{ form_widget(form.email, {'attr': {'class': 'block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'}}) }}
+                </div>
+                <div class="sm:col-span-2">
+                    {{ form_label(form.message, null, {'label_attr': {'class': 'block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'}, 'attr': {'class': 'block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primaryfocus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500'}}) }}
+                    {{ form_widget(form.message, {'attr': {'class': 'block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500'}}) }}
+                </div>
+
+                <h4 class="mt-4 mb-2 text-lg font-bold text-gray-900 dark:text-gray-300 border-b border-orange">{{ 'frontend.contact.create.form.captcha.title'|trans }}</h4>
+
+                <div>
+                    {{ form_label(form.captchaQuestion, null, {'label_attr': {'class': 'block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'}, 'attr': {'class': 'block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'}}) }}
+                    {{ form_widget(form.captchaQuestion, {'attr': {'class': 'block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light', 'readonly': 'readonly'}}) }}
+                </div>
+                <div>
+                    {{ form_label(form.captchaUserAnswer, null, {'label_attr': {'class': 'block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'}, 'attr': {'class': 'block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'}}) }}
+                    {{ form_widget(form.captchaUserAnswer, {'attr': {'class': 'block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light'}}) }}
+                </div>
+                <button type="submit"
+                        id="contact-send" class="py-3 contact-send px-5 text-sm font-medium text-center text-white rounded-lg bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-indigo-500">{{ 'frontend.contact.create.form.send.label'|trans }}</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "frontend/base.html.twig" %}
+
+{% block title %}
+    {{ 'frontend.page.read.title'|trans }} - {{ page.name }}
+{% endblock %}
+
+{% block body %}
+        <section class="container-big bg-blue flow-root rounded-3xl px-6 pb-8 relative mt-10" {{ sylius_test_html_attribute('webpage-read-page') }}>
+            <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+                <div class="bg-white mt-6 p-6 rounded-lg shadow-lg">
+                    <div {{ sylius_test_html_attribute('webpage-read-page-content') }}>{{ page.content|raw }}</div>
+                </div>
+            </div>
+        </section>
+{% endblock %}
+

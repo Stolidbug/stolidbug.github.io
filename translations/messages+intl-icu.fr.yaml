@@ -1,0 +1,243 @@
+app:
+    ui:
+        avatar: Avatar
+        create_user: Créer un utilisateur
+        forgotten_password: Mot de passe oublié
+        legal_notices: Mentions légales
+        overview_of_your_website: Aperçu de votre site web
+        search_customers: Chercher des clients
+        validate: Valider
+        view_website: Voir le site
+        send: Le mail est bien envoyé.
+        captcha_error: Le captcha n'est pas valide
+sylius:
+    ui:
+        show: Afficher
+        publication_date: Date de publication
+        article: Article
+        blog: Blog
+
+backend:
+    blog:
+        ui:
+            article:
+                create:
+                    title: Créer un article
+                index:
+                    title: Articles
+                form:
+                    title:
+                        label: Titre
+                        not_blank: Le titre ne peut pas être vide
+                    content:
+                        label: Contenu
+                        not_blank: Le contenu ne peut pas être vide
+                    image:
+                        label: Image
+                    categories:
+                        label: Catégories
+                    authors:
+                        label: Auteurs
+                    slug:
+                        label: Slug
+                        not_blank: Le slug ne peut pas être vide
+                grid:
+                    fields:
+                        Title:
+                            label: Titre
+                        Content:
+                            label: Contenu
+                        UpdatedAt:
+                            label: Mis à jour le
+                        CreatedAt:
+                            label: Créé le
+                        Categories:
+                            label: Catégorie
+                        Authors:
+                            label: Auteurs
+                        Slug:
+                            label: Slug
+            author:
+                create:
+                    title: Créer un auteur
+                index:
+                    title: Auteurs
+                form:
+                    name:
+                        label: Nomq
+                    slug:
+                        label: Slug
+                grid:
+                    fields:
+                        name:
+                            label: Nom
+                        slug:
+                            label: Slug
+            category:
+                create:
+                    title: Créer une catégorie
+                index:
+                    title: Catégories
+                form:
+                    name:
+                        label: Nom
+                    slug:
+                        label: Slug
+                grid:
+                    fields:
+                        name:
+                            label: Nom
+                        slug:
+                            label: Slug
+
+    webpage:
+        ui:
+            page:
+                create:
+                    title: Créer une page
+                index:
+                    title: Pages
+                subheader: Gérer vos pages
+                form:
+                    name:
+                        label: Nom
+                    content:
+                        label: Contenu
+                    slug:
+                        label: Slug
+                    author:
+                        label: Auteur
+                    publicationDate:
+                        label: Date de publication
+                    status:
+                        label: Status
+                fields:
+                    name:
+                        label: Nom
+                    content:
+                        label: Contenu
+                    author:
+                        label: Auteur
+                    publicationDate:
+                        label: Date de publication
+                    slug:
+                        label: Slug
+                    status:
+                        label: Status
+                        published: Publié
+                        notPublished: Non publié
+            pages:
+                breadcrumb: Pages
+
+frontend:
+    home:
+        title: Christophe Ligneres
+        introduction: Je suis un développeur web, spécialisé dans le développement d'applications web. Je suis aussi un grand fan des nouvelles technologies et du développement logiciel.
+    skills:
+        title: Compétences
+        php:
+            title: PHP
+            content: |
+                Je travaille avec PHP depuis plus de 2 ans. J'ai travaillé avec plusieurs versions de PHP, de 5.6 à 8.2. Je tiens informer des dernières nouveautés.
+        symfony:
+            title: Symfony
+            content: |
+                Je travaille avec Symfony depuis plus de 2 ans. J'ai travaillé avec plusieurs versions de Symfony, de 4.4 à 6.2.
+                J'ai mis à jour des projets de Symfony 4.4 à Symfony 5.4 et de Symfony 5.4 à Symfony 6.2 etc.
+        monofony:
+            title: Monofony
+            content: |
+                Je travaille avec Monofony depuis plus d'un an. Je travaille avec la version 1.10 de Monofony.
+        sylius:
+            title: Sylius
+            content: |
+                Je travaille avec Sylius depuis plus de 1 ans. J'ai travaillé avec plusieurs versions de Sylius, de 1.6 à 1.10.
+                J'ai mis à jour des projets de Sylius 1.6 à Sylius 1.8 et de Sylius 1.8 à Sylius 1.10, etc.
+    header:
+        home:
+            title: Christophe Ligneres
+            subtitle: Bienvenue sur mon site web
+            boutton: Retour à l'accueil
+        contact:
+            title: Contact
+            subtitle: Vous souhaitez me contacter ?
+            boutton: Contactez-moi
+        articles:
+            title: Articles
+            subtitle: Vous souhaitez lire mes articles ?
+        article:
+            title: Article
+            subtitle: Tres bon choix !
+    contact:
+        index:
+            title: Contact
+        create:
+            form:
+                title: Vous rencontrez un problème technique ? Vous avez besoin d'aide pour une question de développement ? N'hésitez pas à me contacter.
+                name:
+                    label: Nom
+                email:
+                    label: Email
+                message:
+                    label: Message
+                send:
+                    label: Envoyer
+                captcha:
+                    title: Vous êtes un robot ?
+                    question:
+                        label: Combien font ?
+                    answer:
+                        label: Votre réponse
+    who_I_am:
+        title: Qui suis-je ?
+        content: I am a web developer, specialized in web application development. I'm also a big fan of new technologies and software development.
+    pages:
+        index:
+            title: Pages
+        read:
+            title: Page
+            created_at: Créé le {date}
+            created_by: Créé par
+    blog:
+        index:
+            title: Articles
+        last_articles:
+            title: Mes derniers articles
+        read:
+            title: Article
+            created_at: Créé le
+            created_by: Créé par
+            categories: Catégories
+    footer:
+        title: Resaux sociaux
+        content: Vous souhaitez me contacter, il y a le formulaire de contact de mon site. Sinon, vous avez mes réseaux sociaux. Mon profil GitHub est l'endroit idéal pour mieux me connaître.
+        home: Monofony
+        legal_notices: Mentions légales
+    game:
+        index:
+            title: nombre mystère
+            subtitle: Bravo ! Vous avez trouvé la page secrète !
+        processor:
+            congratulations: Félicitations, vous avez gagné en {tries} essais.
+            difficulty_increase: La difficulté a augmenté, essayez de deviner le nouveau nombre mystère entre 1 et {newDifficulty}.
+            number_greater: Le nombre mystère est plus grand.
+            number_smaller: Le nombre mystère est plus petit.
+            try_again: Essayez encore.
+            out_of_tries: Vous avez utilisé tous vos essais. Le nombre mystère était {mysteryNumber}.
+            boss_level: "Vous êtes maintenant au niveau du boss ! Souvenez-vous des nombres précédents et devinez leur somme pour passer au niveau suivant."
+            boss_incorrect_sum: "La somme des nombres précédents est incorrecte. Essayez encore."
+        template:
+            mystery_number_title: Jeu du nombre mystère
+            guess_mystery_number: Devinez le nombre mystère
+            guess_between: Essayez de deviner le nombre mystère entre 1 et {difficulty}.
+            max_tries: Vous avez {max_tries} essais pour trouver le nombre mystère.
+
+syndication:
+    rss:
+        title: Le flux RSS de monofony
+        article:
+            title: Articles
+            description: Derniers articles du site
+        category:
+            title: Articles de la catégorie {category}
+            description: Derniers articles de la catégorie {category}

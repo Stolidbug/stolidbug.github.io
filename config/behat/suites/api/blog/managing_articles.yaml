@@ -1,0 +1,11 @@
+default:
+    suites:
+        api_managing_articles:
+            contexts:
+                - App\Tests\Behat\Context\Hook\DoctrineORMContext
+                - App\Tests\Behat\Context\Setup\ApiSecurityContext
+                - App\Tests\Behat\Context\Setup\ArticleContext
+
+                - App\Tests\Behat\Context\UI\API\Blog\ManagingArticlesContext
+            filters:
+                tags: "@api&&@blog&&@articles"

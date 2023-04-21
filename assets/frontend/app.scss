@@ -1,0 +1,28 @@
+@import "~tailwindcss/base";
+@import "~tailwindcss/components";
+@import "~tailwindcss/utilities";
+
+.container-big {
+  @apply 4xl:container 4xl:mx-auto;
+}
+
+.separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.nuage {
+    width: 250px;
+    height: auto;
+    fill: #FFAF38;
+}
+
+.articles-show-button {
+    margin-bottom: 10px;
+}
+
+.image-article {
+    height: 28em;
+}
